@@ -8,18 +8,18 @@ const gulp = require("gulp"),
   cssImport = require("postcss-import"),
   mixins = require("postcss-mixins");
 
-gulp.task("styles", function() {
+gulp.task("styles", function () {
   return gulp
-    .src("./assets/pcss/main.css")
+    .src("./assets/styles/main.css")
     .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
-    .on("error", function(errorInfo) {
+    .on("error", function (errorInfo) {
       console.log(errorInfo.toString());
       this.emit("end");
     })
     .pipe(gulp.dest("./temp/styles"));
 });
 
-gulp.task("watch", function() {
+gulp.task("watch", function () {
   browserSync.init({
     //notify: false,
     server: {
@@ -27,19 +27,19 @@ gulp.task("watch", function() {
     }
   });
 
-  watch("./index.html", function() {
+  watch("./*.html", function () {
     browserSync.reload();
   });
 
-  watch("./assets/pcss/**/*.css", function() {
+  watch("./assets/styles/**/*.css", function () {
     gulp.start("cssInject");
   });
 
-  watch("./assets/pcss/**/*.pcss", function() {
+  watch("./assets/styles/**/*.pcss", function () {
     gulp.start("cssInject");
   });
 });
 
-gulp.task("cssInject", ["styles"], function() {
+gulp.task("cssInject", ["styles"], function () {
   return gulp.src("./temp/styles/main.css").pipe(browserSync.stream());
 });

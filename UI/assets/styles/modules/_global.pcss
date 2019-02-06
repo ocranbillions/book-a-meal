@@ -1,0 +1,61 @@
+/* Reset */
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/* Main Styling */
+html,body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+  font-size: 10px; 
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  padding-bottom: 20px;  
+  font-weight: normal;
+}
+
+p {
+  margin: 10px 0;
+}
+
+
+/* Utility Classes */
+.container {
+  margin: auto;  
+  width: 100%;
+  overflow: auto;
+  padding: 0 10px;
+
+  @media only screen and (min-width: 580px) {
+    & {      
+        max-width: 1100px;
+        padding: 0 10px;
+    }
+  }
+}
+
+
+.btn {
+    text-align: center;
+    font-weight: 400;
+    padding: .375rem .75rem;
+    font-size: 2rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+    width: 100%; 
+    margin-top: 1.6rem;
+    background: none;
+    border-style: none;
+    border: .1rem solid #fff;
+    display: block;
+    /* color: #fff; */
+} 
