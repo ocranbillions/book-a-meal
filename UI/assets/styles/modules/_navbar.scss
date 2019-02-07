@@ -1,0 +1,61 @@
+/* Navbar */
+#navbar {
+  background: #333;
+  color: #fff;
+  overflow: auto;
+  border-bottom: 0.3rem solid #f7c08a;
+
+  .logo {
+    padding-top: 0.5rem;
+    font-size: 3.5rem;
+    text-align: center;
+
+    @media only screen and (min-width: 720px) {
+      & {
+        text-align: left;
+      }
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+
+  ul {
+    list-style: none;
+    display: block;
+    width: 100%;
+
+    @media only screen and (min-width: 720px) {
+      & {
+        float: right;
+        display: block;
+        background: rgb(110, 231, 161);
+      }
+
+      & li {
+        float: left;
+      }
+      & .logout {
+        float: right;
+      }
+    }
+
+    & li {
+      display: block;
+
+      & a {
+        display: block;
+        padding: 1.1rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      & a:hover,
+      & .active {
+        background: #444;
+        color: #f7c08a;
+      }
+    }
+  }
+}

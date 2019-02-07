@@ -38,16 +38,13 @@ function bundle_scripts(done) {
   done();
 };
 
-
 function inject_css() {
   return gulp.src("./temp/styles/main.css").pipe(browserSync.stream());
 }
 
-function reload_browser(done) {
+function reload_browser() {
   browserSync.reload();
-  done();
 }
-
 
 function live_edit(done) {
 
@@ -60,7 +57,7 @@ function live_edit(done) {
 
   watch("./*.html", reload_browser);
   watch("./assets/styles/**/*.css", gulp.series(postcss_to_css, inject_css));
-  watch("./assets/styles/**/*.pcss", gulp.series(postcss_to_css, inject_css));
+  watch("./assets/styles/**/*.scss", gulp.series(postcss_to_css, inject_css));
   watch("./assets/scripts/**/*.js", gulp.series(bundle_scripts, reload_browser));
 
   done();
