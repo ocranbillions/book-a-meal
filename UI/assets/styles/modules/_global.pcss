@@ -42,6 +42,18 @@ p {
   }
 }
 
+.container--manage-meals-page {
+    overflow: visible;
+}
+
+.heading {
+    @media only screen and (min-width: 700px) {
+        & {                        
+            font-size: 4rem;
+            line-height: 5rem;
+        }
+    }
+}
 
 .btn {
     text-align: center;
@@ -59,3 +71,16 @@ p {
     display: block;
     /* color: #fff; */
 } 
+
+.form_container {
+    background: #3b8ea5;
+    overflow: auto;
+
+    & div {
+        float: left;
+    }
+    & label, & input {
+        display: inline-block;
+        font-size: 2rem;
+    }
+}

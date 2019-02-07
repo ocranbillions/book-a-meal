@@ -34,6 +34,15 @@ p {
         padding: 0 10px;
     }
   }
+.container--manage-meals-page {
+    overflow: visible;
+}
+@media only screen and (min-width: 700px) {
+        .heading {                        
+            font-size: 4rem;
+            line-height: 5rem;
+        }
+    }
 .btn {
     text-align: center;
     font-weight: 400;
@@ -50,6 +59,17 @@ p {
     display: block;
     /* color: #fff; */
 }
+.form_container {
+    background: #3b8ea5;
+    overflow: auto;
+}
+.form_container div {
+        float: left;
+    }
+.form_container label, .form_container input {
+        display: inline-block;
+        font-size: 2rem;
+    }
 /* Navbar */
 #navbar {
     background: #333; 
@@ -92,7 +112,7 @@ p {
               font-size: 1.3rem;
             }
   
-            #navbar ul li a:hover {
+            #navbar ul li a:hover, #navbar ul li .active {
               background: #444;
               color: #f7c08a;
             }
@@ -119,12 +139,15 @@ p {
             }
             
         }
-@media only screen and (min-width: 700px) {
-                .hero-content .lead-block .heading {                        
+/* 
+        & .heading {
+            @media only screen and (min-width: 700px) {
+                & {                        
                     font-size: 4rem;
                     line-height: 5rem;
                 }
             }
+        } */
 .hero-content .lead-block .lead {
             display: none;
         }
