@@ -14,7 +14,10 @@
         <!-- Navigation -->
         <nav id="navbar">
             <div class="container">
-                <h1 class="logo"><a href="index.html">BUKaMEAL.com</a></h1>
+                <h1 class="logo"><a href="index.html">BOOKaMEAL</a></h1>
+                <div class="hb_container">
+                    <span class="hamburger_menu">Menu</span>
+                </div>
                 <ul>
                     <li><a href="manage_meals.html" class="active">Manage Meals</a></li>
                     <li><a href="set_menu.html">Set Menu</a></li>
@@ -24,16 +27,12 @@
                 </ul>
             </div>
         </nav>
-        <div class="container container--manage-meals-page">
-            <span class="heading">Manage Meals</span>
-        </div>
     </header>
 
     <section class="container">
+        <span class="heading">Manage Meals</span>
+
         <div class="form_container">
-
-            <h3>Add Meal</h3>
-
             <form action="" class="add_meal">
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -44,9 +43,14 @@
                     <input type="number" name="price" id="price" />
                 </div>
                 <div class="form-group">
+                    <label for="img_upload">Image</label>
+                    <input type="file" name="pic" accept="image/*" id="img_upload">
+                </div>
+
+                <div class="form-group">
                     <textarea rows="4" cols="50" name="comment" form="add_meal">Description...</textarea>
                 </div>
-                <input type="submit" value="Add Meal" class="">
+                <input type="submit" value="Add Meal" class="send_btn">
             </form>
         </div>
     </section>

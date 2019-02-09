@@ -1,2 +1,5 @@
+import $ from 'jquery';
 
-console.log('this is a test');
+$('.hamburger_menu').on('click', function () {
+    $('ul').toggle();
+});

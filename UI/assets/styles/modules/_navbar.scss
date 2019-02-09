@@ -1,36 +1,42 @@
 /* Navbar */
 #navbar {
-  background: #333;
-  color: #fff;
   overflow: auto;
-  border-bottom: 0.3rem solid #f7c08a;
+  background: $navyBlue;
+  border-bottom: 0.5rem solid #2e9cca;
+
+  /* Navbar links */
+  a {
+    color: white;
+    background: none;
+  }
 
   .logo {
     padding-top: 0.5rem;
     font-size: 3.5rem;
-    text-align: center;
+    display: inline-block;
+
+    & a {
+      border-radius: 1rem;
+    }
 
     @media only screen and (min-width: 720px) {
       & {
+        float: left;
         text-align: left;
+        display: block;
       }
     }
   }
 
-  a {
-    color: #fff;
-  }
-
   ul {
     list-style: none;
-    display: block;
+    display: none;
     width: 100%;
 
     @media only screen and (min-width: 720px) {
       & {
         float: right;
         display: block;
-        background: rgb(110, 231, 161);
       }
 
       & li {
@@ -46,14 +52,14 @@
 
       & a {
         display: block;
-        padding: 1.1rem;
+        padding: 0.4rem;
         text-align: center;
         font-size: 1.5rem;
       }
 
       & a:hover,
       & .active {
-        background: #444;
+        background: $lightBlue;
         color: #f7c08a;
       }
     }

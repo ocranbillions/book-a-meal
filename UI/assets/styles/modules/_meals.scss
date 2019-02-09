@@ -1,10 +1,8 @@
 .row {
-    /* border-bottom: 2px dotted black; */
-    border: 2px dotted black;
-    display: inline-block;
-    width: 80%;
-    margin: 0px auto;
-
+  /* border-bottom: 2px dotted black; */
+  /*   border: 2px dotted black; */
+  display: inline-block;
+  margin: 0px auto;
 }
 
 .row::after {
@@ -19,16 +17,16 @@
     margin: 0px auto;
 } */
 .meal {
-    float: left;
-    width: 20rem;
-    text-align: center;
-    padding: 5px;
-    border: 1px dotted blue;
+  float: left;
+  width: 20rem;
+  text-align: center;
+  padding: 5px;
+  /*  border: 1px dotted blue; */
 
-    /* @media only screen and (min-width: 800px) {
+  /* @media only screen and (min-width: 800px) {
     } */
 
-    img {
-        width: 95%;
-    }
+  img {
+    width: 95%;
+  }
 }

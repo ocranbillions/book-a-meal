@@ -49,7 +49,7 @@ function reload_browser() {
 function live_edit(done) {
 
   browserSync.init({
-    //notify: false,
+    notify: false,
     server: {
       baseDir: "./"
     }
