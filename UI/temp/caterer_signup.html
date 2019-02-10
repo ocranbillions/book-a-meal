@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="temp/styles/main.css" />
-    <title>Book A Meal</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Book A Meal | Signup</title>
 </head>
 
 <body class="">
@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="lead-block">
-                        <span class="heading">Enjoy A Great Meal From Us Today!</span>
+                        <span class="heading">Register and get instant access to thousands of customers</span>
                         <p class="lead">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
                             eligendi laboriosam. Repellendus officia harum eaque.
@@ -39,8 +39,11 @@
 
                     <!-- Login Form -->
                     <div class="card">
-                        <h2>Login</h2>
-                        <form action="./temp/manage_meals.html">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="name">Restaurant Name</label>
+                                <input type="text" name="name" id="name" />
+                            </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="email" name="email" id="email" />
@@ -49,11 +52,16 @@
                                 <label for="password">Password</label>
                                 <input type="password" name="password" id="password" />
                             </div>
-                            <input type="submit" value="Login" class="btn submit-btn">
+                            <div class="form-group">
+                                <label for="confirm_password">Confirm Password</label>
+                                <input type="password" name="confirm_password" id="confirm_password" />
+                            </div>
+                            <input type="submit" value="Register" class="btn submit-btn">
                         </form>
+
                         <div class="register">
-                            <a href="./temp/customer_signup.html">Customer Signup</a>
-                            <a href="./temp/caterer_signup.html">Caterer Signup</a>
+                            <a href="customer_signup.html">Customer Signup</a>
+                            <a href="../index.html">Sign In</a>
                         </div>
                     </div>
                 </div>

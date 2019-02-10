@@ -2,7 +2,7 @@
 #navbar {
   overflow: auto;
   background: $navyBlue;
-  border-bottom: 0.5rem solid #2e9cca;
+  border-bottom: 0.5rem solid $fineGreen;
 
   /* Navbar links */
   a {
@@ -55,12 +55,12 @@
         padding: 0.4rem;
         text-align: center;
         font-size: 1.5rem;
+        font-weight: 500;
       }
 
       & a:hover,
       & .active {
-        background: $lightBlue;
-        color: #f7c08a;
+        background: $fineGreen;
       }
     }
   }

@@ -56,6 +56,7 @@ function live_edit(done) {
   });
 
   watch("./*.html", reload_browser);
+  watch("./temp/**/*.html", reload_browser);
   watch("./assets/styles/**/*.css", gulp.series(postcss_to_css, inject_css));
   watch("./assets/styles/**/*.scss", gulp.series(postcss_to_css, inject_css));
   watch("./assets/scripts/**/*.js", gulp.series(bundle_scripts, reload_browser));
