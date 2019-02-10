@@ -1,0 +1,6 @@
+@import "modules/_global.scss";
+@import "modules/_utility-classes.scss";
+@import "modules/_navbar.scss";
+@import "modules/_hero.scss";
+@import "modules/_table.scss";
+@import "modules/_meals.scss";
