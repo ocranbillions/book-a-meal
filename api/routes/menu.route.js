@@ -8,5 +8,7 @@ const router = Router();
 
 router.get('/', MenuController.fetchAllMenu);
 router.get('/:date', MenuController.getSingleMenu);
+// router.post('/:date', MenuController.addMenu);
+router.post('/', MenuController.addMenu);
 
 export default router;
