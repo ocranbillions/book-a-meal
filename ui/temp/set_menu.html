@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Book A Meal | Manage Meals</title>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="container">
+                <h1 class="logo"><a href="../index.html">BOOKaMEAL</a></h1>
+                <div class="hb_container">
+                    <span class="hamburger_menu">Menu</span>
+                </div>
+                <ul>
+                    <li><a href="manage_meals.html">Manage Meals</a></li>
+                    <li><a href="set_menu.html" class="active">Set Menu</a></li>
+                    <li><a href="menu_list.html">Menu List</a></li>
+                    <li><a href="admin_order_history.html">Order History</a></li>
+                    <li class="logout"><a href="../index.html">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <span class="heading_2">Set Menu</span>
+        <div class="form_container">
+            <form action="" id="set_menu">
+                <div class="form-group">
+                    <select name="meals">
+                        <option value="rice">Rice with stew</option>
+                        <option value="salad">Mexican salad</option>
+                        <option value="potatoes">Sweet Potatoes</option>
+                        <option value="beans">Beans & palm oil</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="date" name="menu_date">
+                </div>
+                <input type="submit" value="Add Meal" class="">
+            </form>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="table_container">
+            <h4>Today</h4>
+            <table class="admin_menu_table">
+                <thead>
+                    <tr>
+                        <th>#id</th>
+                        <th class="hide_column">Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th class="hide_column">Description</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="hide_column"><img src="../assets/images/rice.JPG"></td>
+                        <td>Jollof with Chicken</td>
+                        <td>N500</td>
+                        <td class="hide_column">Jollof Rice with Barbecue Chicken</td>
+                        <td><a href="#">edit</a></td>
+                        <td><a href="#">X</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="hide_column"><img src="../assets/images/rice.JPG"></td>
+                        <td>Jollof with Chicken</td>
+                        <td>N500</td>
+                        <td class="hide_column">Jollof Rice with Barbecue Chicken</td>
+                        <td><a href="#">edit</a></td>
+                        <td><a href="#">X</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="hide_column"><img src="../assets/images/rice.JPG"></td>
+                        <td>Jollof with Chicken</td>
+                        <td>N500</td>
+                        <td class="hide_column">Jollof Rice with Barbecue Chicken</td>
+                        <td><a href="#">edit</a></td>
+                        <td><a href="#">X</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table_container">
+            <h4>Tomorrow</h4>
+            <table class="admin_menu_table">
+                <thead>
+                    <tr>
+                        <th>#id</th>
+                        <th class="hide_column">Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th class="hide_column">Description</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="hide_column"><img src="../assets/images/rice.JPG"></td>
+                        <td>Jollof with Chicken</td>
+                        <td>N500</td>
+                        <td class="hide_column">Jollof Rice with Barbecue Chicken</td>
+                        <td><a href="#">edit</a></td>
+                        <td><a href="#">X</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="hide_column"><img src="../assets/images/rice.JPG"></td>
+                        <td>Jollof with Chicken</td>
+                        <td>N500</td>
+                        <td class="hide_column">Jollof Rice with Barbecue Chicken</td>
+                        <td><a href="#">edit</a></td>
+                        <td><a href="#">X</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="hide_column"><img src="../assets/images/rice.JPG"></td>
+                        <td>Jollof with Chicken</td>
+                        <td>N500</td>
+                        <td class="hide_column">Jollof Rice with Barbecue Chicken</td>
+                        <td><a href="#">edit</a></td>
+                        <td><a href="#">X</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="./scripts/app.bundle.js"></script>
+</body>
+
+</html>
