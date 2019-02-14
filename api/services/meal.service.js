@@ -13,6 +13,7 @@ const MealService = {
       newMeal.price = meal.price;
       return newMeal;
     });
+    // const validMeals = dummyData.meals;
     return validMeals;
   },
 
