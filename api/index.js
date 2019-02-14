@@ -1,15 +1,18 @@
 import express from 'express';
-// import bodyParser from 'body-parser';
-// app.use(bodyParser.json());
-// app.use(
-//   bodyParser.urlencoded({
-//     extended: true,
-//   }),
-// );
+import bodyParser from 'body-parser';
+// routes
+import mealRoutes from './routes/meal.route';
 
 const app = express();
+app.use(bodyParser.json());
 
-app.get('/', (req, res) => res.send('Hello World!'));
+
+app.get('/', (req, res) => {
+  return res.send('The API is working');
+});
+
+// handle all meal routes
+app.use('/api/v1/meals', mealRoutes);
 
 
 const port = 3000;
