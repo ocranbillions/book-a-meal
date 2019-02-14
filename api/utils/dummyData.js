@@ -34,7 +34,7 @@ export default {
       {
         id: 1,
         imgSrc: 'https://via.placeholder.com/80',
-        meal: 'Beans',
+        meal: 'Beanss',
         price: '500',
       },
       {

@@ -7,6 +7,15 @@ const MenuController = {
       status: 'success',
       data: allMenu
     }).status(200);
+  },
+
+  getSingleMenu(req, res) {
+    const date = req.params.date;
+    const singleMenu = MenuService.getSingleMenu(date);
+    return res.json({
+      status: 'success',
+      data: singleMenu
+    }).status(200);
   }
 }
 
