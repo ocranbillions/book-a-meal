@@ -18,10 +18,7 @@ const MealService = {
   },
 
   addMeal(meal) {
-    const mealLength = dummyData.meals.length;
-    const lastId = dummyData.meals[mealLength - 1].id;
-    const newId = lastId + 1;
-    meal.id = newId;
+    meal.id = dummyData.meals.length + 1;
     dummyData.meals.push(meal);
     return meal;
   },
