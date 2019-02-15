@@ -70,5 +70,31 @@ export default {
         price: '500',
       },
     ]
-  }
+  },
+  orders: [
+    {
+      orderId: 419,
+      name: 'Samuel Ocran',
+      date: '14-02-2019',
+      meal: 'Hot Eba',
+      address: '14 Penninsula, Lekki',
+      cost: 500
+    },
+    {
+      orderId: 420,
+      name: 'Segun Jackson',
+      date: '01-01-2019',
+      meal: 'Beans with Plantain',
+      address: '3 Ajose Adeogun, Victoria Island',
+      cost: 300
+    },
+    {
+      orderId: 421,
+      name: 'Peter Pius',
+      date: '11-01-2019',
+      meal: 'Chicken',
+      address: '22 Ajao Estate, Lagos',
+      cost: 600
+    },
+  ]
 };
