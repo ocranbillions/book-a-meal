@@ -2,7 +2,7 @@
 .container {
   margin: auto;
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
   padding: 10px 10px;
 
   @media only screen and (min-width: 580px) {
@@ -14,10 +14,22 @@
 }
 
 .bg-img {
-  /* background: linear-gradient(0deg, rgba(119, 50, 88, 0.3), rgba(142, 103, 233, 0.3)),
-      url("../../assets/images/showcase.jpeg") no-repeat center center/cover; */
-  /* background-color: rgba(0, 0, 0, 0.4); */
-  background: url("../../assets/images/showcase.jpeg") no-repeat center center/cover;
+  background: url("../../assets/images/showcase4.jpeg") no-repeat center center/cover;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  /*   height: 40%;
+  overflow: auto; */
+}
+
+.bg-img2 {
+  background: url("../../assets/images/showcase4.jpeg") no-repeat center center/cover;
+}
+
+.fade-bg-img {
+  background-color: rgba(0, 0, 0, 0.55);
 }
 
 .heading {
@@ -40,26 +52,14 @@
   margin-bottom: 1rem;
 }
 
-/* Hamburger menu */
-.hb_container {
-  display: none;
-  float: right;
-  background: white;
-  margin-top: 0.5rem;
-  @media only screen and (max-width: 719px) {
-    & {
-      display: block;
-    }
-  }
-
-  .hamburger_menu {
-    padding: 1rem;
-    cursor: pointer;
-  }
-}
-
 .btn {
   margin-top: 10px;
+
+  background: $fineGreen;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
 .order_now {
   width: 100%;

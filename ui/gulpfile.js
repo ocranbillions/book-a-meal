@@ -9,13 +9,15 @@ const gulp = require("gulp"),
   mixins = require("postcss-mixins"),
   webpack = require("webpack");
 
+
+// Run all tasks
 gulp.task('styles', postcss_to_css);
 
 gulp.task('scripts', bundle_scripts);
 
 gulp.task('watch', live_edit);
 
-//Converts postcss/scss to css
+//Converts scss/pcss to css
 function postcss_to_css() {
   return gulp
     .src("./assets/styles/main.css")

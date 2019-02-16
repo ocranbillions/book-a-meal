@@ -1,7 +1,6 @@
 /* Navbar */
-#navbar {
+.navbar {
   overflow: auto;
-  background: $navyBlue;
   border-bottom: 0.5rem solid $fineGreen;
 
   /* Navbar links */
@@ -12,15 +11,16 @@
 
   .logo {
     padding-top: 0.5rem;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     display: inline-block;
 
-    & a {
+    a {
       border-radius: 1rem;
     }
 
     @media only screen and (min-width: 720px) {
-      & {
+       {
+        font-size: 3.5rem;
         float: left;
         text-align: left;
         display: block;
@@ -32,23 +32,22 @@
     list-style: none;
     display: none;
     width: 100%;
-
     @media only screen and (min-width: 720px) {
-      & {
+       {
         float: right;
         display: block;
       }
-
-      & li {
+      li {
         float: left;
       }
-      & .logout {
+      .logout {
         float: right;
       }
     }
 
     & li {
       display: block;
+      padding: 5px;
 
       & a {
         display: block;
@@ -60,8 +59,31 @@
 
       & a:hover,
       & .active {
-        background: $fineGreen;
+        /*  background: $fineGreen; */
+        border: 1px solid $fineGreen;
       }
     }
   }
+
+  /* Hamburger menu */
+  .hb_container {
+    display: none;
+    float: right;
+    background: $fineGreen;
+    margin-top: 0.5rem;
+    @media only screen and (max-width: 719px) {
+      & {
+        display: block;
+      }
+    }
+
+    .hamburger_menu {
+      padding: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.navbar-offbg-color {
+  background: none;
 }
