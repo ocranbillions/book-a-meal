@@ -15,10 +15,15 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7em;
   font-size: 10px;
+  /*   height: 100vh;
+  overflow: auto; */
 }
+/* html {
+  height: contain;
+} */
 body {
   font-size: 1.5rem;
-  color: $navyBlue;
+  color: white;
 }
 a {
   text-decoration: none;
