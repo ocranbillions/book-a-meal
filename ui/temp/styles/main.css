@@ -288,6 +288,17 @@ table td {
 .orders_table tbody tr:last-child td:first-child {
     text-align: right;
   }
+/* to be used later for mobile display */
+/* table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 310px;
+}
+table td {
+  border: solid 1px #fab;
+  width: 150px;
+  word-wrap: break-word;
+} */
 .row {
   /* border-bottom: 2px dotted black; */
   /*   border: 2px dotted black; */
