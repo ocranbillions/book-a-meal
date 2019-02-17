@@ -37,7 +37,7 @@ const OrderService = {
     return dummyData.orders;
   },
 
-  // Place order - user cannot modify the order after 5mins
+  // Place order - user cannot modify the order after 1min
   // After 1min change status to 'processed' so user can't modify
   // wil be changed to 5mins on production
   addOrder(order) {
@@ -48,7 +48,7 @@ const OrderService = {
     setTimeout(() => {
       const index = dummyData.orders.indexOf(order);
       dummyData.orders[index].status = 'processed';
-    }, 60000); //<-- 1minutes 
+    }, 60000); //<-- 1minute
 
     const orders = dummyData.orders;
     return orders;
