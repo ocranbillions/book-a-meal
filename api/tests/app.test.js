@@ -21,14 +21,19 @@ describe('Test All Meal Routes', () => {
   });
 
   describe('/GET meals/:id', () => {
-    it('should get a meal', () => {
+    it('should GET a meal with an id of 1', () => {
       chai.request(server)
         .get('/api/v1/meals/1')
         .end((err, res) => {
-          res.body.should.have.property('foundMeal');
-          res.body.should.have.property('status').eql('success');
+          res.body.should.have.property('meal');
           res.should.have.status(200);
         });
+    });
+
+    it('should NOT GET a meal that is not in the db', () => {
+      chai.request(server)
+        .get('/api/v1/meals/8')
+        .end((err, res) => res.should.have.status(404));
     });
   });
 

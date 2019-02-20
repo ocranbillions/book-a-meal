@@ -27,16 +27,11 @@ const MealController = {
   },
   getSingleMeal(req, res) {
     const { id } = req.params;
-    const foundMeal = MealService.getAMeal(id);
-    // if (Object.entries(foundMeal).length === 0 && foundMeal.constructor === Object) {
-    //   return res.json({
-    //     status: 'failed',
-    //   });
-    // }
-    return res.json({
-      foundMeal,
-      status: 'success',
-    });
+    const meal = MealService.getAMeal(id);
+    if (Object.entries(meal).length !== 0 && meal.constructor === Object) {
+      return res.json({ meal });
+    }
+    return res.status(404);
   },
   updateMeal(req, res) {
     const { id } = req.params;
