@@ -5,9 +5,9 @@ const MealController = {
   fetchAllMeals(req, res) {
     const allMeals = MealService.fetchAllMeals();
     return res.json({
+      allMeals,
       status: 'success',
-      data: allMeals
-    }).status(200);
+    });
   },
   addAMeal(req, res) {
     /*
@@ -21,35 +21,39 @@ const MealController = {
     const newMeal = req.body;
     const createdMeal = MealService.addMeal(newMeal);
     return res.json({
+      createdMeal,
       status: 'success',
-      data: createdMeal
-    }).status(201);
+    });
   },
   getSingleMeal(req, res) {
-    const id = req.params.id;
+    const { id } = req.params;
     const foundMeal = MealService.getAMeal(id);
+    // if (Object.entries(foundMeal).length === 0 && foundMeal.constructor === Object) {
+    //   return res.json({
+    //     status: 'failed',
+    //   });
+    // }
     return res.json({
+      foundMeal,
       status: 'success',
-      data: foundMeal
-    }).status(200);
+    });
   },
   updateMeal(req, res) {
-    const id = req.params.id;
+    const { id } = req.params;
     const newMeal = req.body;
     const updatedMeal = MealService.updateMeal(id, newMeal);
     return res.json({
+      updatedMeal,
       status: 'success',
-      data: updatedMeal,
-    }).status(200);
+    });
   },
   deleteMeal(req, res) {
-    const id = req.params.id;
+    const { id } = req.params;
     const result = MealService.deleteMeal(id);
     return res.json({
+      result,
       status: 'success',
-      data: result
-    }).status(200);
-
+    });
   },
 };
 
