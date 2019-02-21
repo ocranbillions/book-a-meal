@@ -13,15 +13,20 @@ const MealController = {
     /*
         Expect json of the format
         {
-            name: "some food",
-            size: "LArge",
-            "price": 900
+          imgSrc: 'image-url',
+          name: 'mealName',
+          description: 'Some description',
+          price: '450'
         }
     */
-    const newMeal = req.body;
-    const createdMeal = MealService.addMeal(newMeal);
+    let meal = req.body;
+    const result = MealService.addMeal(meal);
+
+    if (result.error) return res.status(400).send(result.error.message);
+
+    meal = result;
     return res.json({
-      createdMeal,
+      meal,
       status: 'success',
     });
   },
@@ -29,11 +34,10 @@ const MealController = {
     let { id } = req.params;
     id = parseInt(id);
     const meal = MealService.getAMeal(id);
-    // if (Object.entries(meal).length !== 0 && meal.constructor === Object) {
     if (meal) {
       return res.json({ meal });
     }
-    return res.status(404).send(`The meal with the given ID was not found.`);
+    return res.status(404).send('The meal with the given ID was not found.');
   },
   updateMeal(req, res) {
     let { id } = req.params;
@@ -49,10 +53,8 @@ const MealController = {
     let { id } = req.params;
     id = parseInt(id);
     const result = MealService.deleteMeal(id);
-    return res.json({
-      result,
-      status: 'success',
-    });
+    if (result === 404) return res.status(404).send('The meal with the given ID was not found.');
+    return res.json({ result, message: 'Delete was successful' });
   },
 };
 
