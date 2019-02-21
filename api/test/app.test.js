@@ -73,9 +73,9 @@ describe('Test All Meal Routes', () => {
 
   });
 
-  describe('/UPDATE meal', () => {
+  describe('/UPDATE meal/:id', () => {
     it('should update a meal', () => {
-      const updatedMeal = {
+      const meal = {
         imgSrc: 'https://via.placeholder.com/80',
         name: 'newMeal to add',
         description: 'Newly updatedMeal meal via moch test',
@@ -84,9 +84,9 @@ describe('Test All Meal Routes', () => {
 
       chai.request(server)
         .put('/api/v1/meals/50')
-        .send(updatedMeal)
+        .send(meal)
         .end((err, res) => {
-          res.body.should.have.property('updatedMeal');
+          res.body.should.have.property('meal');
           res.body.should.have.property('status').eql('success');
           res.should.have.status(200);
         });
@@ -99,7 +99,7 @@ describe('Test All Meal Routes', () => {
       chai.request(server)
         .delete('/api/v1/meals/50')
         .end((err, res) => {
-          res.body.should.have.property('result');
+          res.body.should.have.property('meal');
           res.body.should.have.property('message').eql('Delete was successful');
           res.should.have.status(200);
         });

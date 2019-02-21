@@ -2,28 +2,28 @@ export default {
   meals: [
     {
       id: 50,
-      imgSrc: 'https://via.placeholder.com/80',
+      image: 'https://via.placeholder.com/80',
       name: 'Fried Rice1',
       description: 'Some very nice fried rice you can\'t resist',
       price: '450'
     },
     {
       id: 60,
-      imgSrc: 'https://via.placeholder.com/80',
+      image: 'https://via.placeholder.com/80',
       name: 'Fried Rice2',
       description: 'Some very nice fried rice you can\'t resist',
       price: '450'
     },
     {
       id: 70,
-      imgSrc: 'https://via.placeholder.com/80',
+      image: 'https://via.placeholder.com/80',
       name: 'Fried Rice3',
       description: 'Some very nice fried rice you can\'t resist',
       price: '450'
     },
     {
       id: 80,
-      imgSrc: 'https://via.placeholder.com/80',
+      image: 'https://via.placeholder.com/80',
       name: 'Fried Rice4',
       description: 'Some very nice fried rice you can\'t resist',
       price: '450'

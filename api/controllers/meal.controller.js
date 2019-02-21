@@ -30,6 +30,7 @@ const MealController = {
       status: 'success',
     });
   },
+
   getSingleMeal(req, res) {
     let { id } = req.params;
     id = parseInt(id);
@@ -39,22 +40,30 @@ const MealController = {
     }
     return res.status(404).send('The meal with the given ID was not found.');
   },
+
   updateMeal(req, res) {
     let { id } = req.params;
     id = parseInt(id);
-    const newMeal = req.body;
-    const updatedMeal = MealService.updateMeal(id, newMeal);
+    let meal = req.body;
+    const result = MealService.updateMeal(id, meal);
+
+    if (result.error) return res.status(400).send(result.error.message);
+
+    meal = result;
     return res.json({
-      updatedMeal,
+      meal,
       status: 'success',
     });
   },
+
   deleteMeal(req, res) {
     let { id } = req.params;
     id = parseInt(id);
     const result = MealService.deleteMeal(id);
     if (result === 404) return res.status(404).send('The meal with the given ID was not found.');
-    return res.json({ result, message: 'Delete was successful' });
+
+    const meal = result;
+    return res.json({ meal, message: 'Delete was successful' });
   },
 };
 
