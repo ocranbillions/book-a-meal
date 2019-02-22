@@ -74,14 +74,13 @@ describe('Test All Meal Routes', () => {
   });
 
   describe('/UPDATE meal/:id', () => {
-    it('should update a meal', () => {
+    it('should UPDATE meal with new valid details', () => {
       const meal = {
-        imgSrc: 'https://via.placeholder.com/80',
+        image: 'https://via.placeholder.com/80',
         name: 'newMeal to add',
         description: 'Newly updatedMeal meal via moch test',
         price: '1000',
       };
-
       chai.request(server)
         .put('/api/v1/meals/50')
         .send(meal)
@@ -89,6 +88,21 @@ describe('Test All Meal Routes', () => {
           res.body.should.have.property('meal');
           res.body.should.have.property('status').eql('success');
           res.should.have.status(200);
+        });
+    });
+
+    it('should NOT UPDATE meal with new invalid details', () => {
+      const meal = {
+        image: 'https://via.placeholder.com/80',
+        name: '',  // empty field
+        description: '', // another empty field
+        price: '1000',
+      };
+      chai.request(server)
+        .put('/api/v1/meals/50')
+        .send(meal)
+        .end((err, res) => {
+          res.should.have.status(400);
         });
     });
   });

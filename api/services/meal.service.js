@@ -61,7 +61,7 @@ const MealService = {
     const index = dummyData.meals.indexOf(meal);
 
     // Update meal
-    dummyData.meals[index].imgSrc = newMeal.imgSrc;
+    dummyData.meals[index].image = newMeal.image;
     dummyData.meals[index].name = newMeal.name;
     dummyData.meals[index].description = newMeal.description;
     dummyData.meals[index].price = newMeal.price;
