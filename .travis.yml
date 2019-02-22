@@ -1,0 +1,11 @@
+language: node_js
+node_js: 
+  - "stable"
+cache:
+  directories:
+    - "api/node_modules"
+    - "ui/node_modules"
+# whitelist
+branches:
+  only:
+  - travis-ci
