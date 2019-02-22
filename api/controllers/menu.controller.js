@@ -4,37 +4,39 @@ const MenuController = {
   fetchAllMenu(req, res) {
     const allMenu = MenuService.fetchAllMenu();
     return res.json({
+      allMenu,
       status: 'success',
-      data: allMenu
-    }).status(200);
+    });
   },
 
   getSingleMenu(req, res) {
-    const date = req.params.date;
-    const singleMenu = MenuService.getSingleMenu(date);
+    const { date } = req.params;
+    const menu = MenuService.getSingleMenu(date);
     return res.json({
+      menu,
       status: 'success',
-      data: singleMenu
-    }).status(200);
+    });
   },
 
   addMenu(req, res) {
     /*
-      Expect json in this format WITH DATE
+      Expect data from db
       {
-          date: "some date"
-          name: "some food",
-          size: "LArge",
-          "price": 900
+        date: 'some date',
+        image: 'some image link',
+        name: 'some meal',
+        description: 'some description',
+        price: 'some price',
       }
     */
-    const date = req.body.date;
-    const meal = req.body;
-    const addedMeal = MenuService.addMenu(date, meal);
+
+    const date = req.body.date; // Expect date from form
+    const meal = req.body; // this should come from db
+    const result = MenuService.addMenu(date, meal);
     return res.json({
+      result,
       status: 'success',
-      data: addedMeal
-    }).status(201);
+    });
   }
 }
 

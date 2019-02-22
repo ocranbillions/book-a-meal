@@ -17,7 +17,7 @@ const menuService = {
     if (dummyData.menu[date] !== undefined) {
       const newMeal = new Meal();
       newMeal.id = dummyData.menu[date].length + 1;
-      newMeal.imgSrc = meal.imgSrc;
+      newMeal.image = meal.image;
       newMeal.name = meal.name;
       newMeal.description = meal.description;
       newMeal.price = meal.price;
@@ -33,6 +33,7 @@ const menuService = {
     newMeal.description = meal.description;
     newMeal.price = meal.price;
     dummyData.menu[date].push(newMeal);
+    // console.log(dummyData.menu);
     return newMeal;
   }
 }
