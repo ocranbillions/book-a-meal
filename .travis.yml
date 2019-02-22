@@ -3,7 +3,8 @@ node_js:
   - "stable"
 cache:
   directories:
-    - "node_modules"
+    - "api/node_modules"
+    - "ui/node_modules"
 # whitelist
 branches:
   only:
