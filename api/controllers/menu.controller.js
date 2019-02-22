@@ -1,4 +1,5 @@
 import MenuService from '../services/menu.service';
+import MealService from '../services/meal.service';
 
 const MenuController = {
   fetchAllMenu(req, res) {
@@ -19,20 +20,19 @@ const MenuController = {
   },
 
   addMenu(req, res) {
-    /*
-      Expect data from db
-      {
-        date: 'some date',
-        image: 'some image link',
-        name: 'some meal',
-        description: 'some description',
-        price: 'some price',
-      }
-    */
+    // Expect data from form element
+    // const mealName = req.body.meals.value; //meal names should gotten from db
+    // const date = req.body.date;
 
-    const date = req.body.date; // Expect date from form
-    const meal = req.body; // this should come from db
+    const mealName = req.body.name;
+    const date = req.body.date;
+
+
+    // Get meal from db
+    const meal = MealService.findMealByName(mealName);
+
     const result = MenuService.addMenu(date, meal);
+
     return res.json({
       result,
       status: 'success',

@@ -42,6 +42,11 @@ const MealService = {
     return meal;
   },
 
+  findMealByName(name) {
+    const meal = dummyData.meals.find(m => m.name === name);
+    return meal;
+  },
+
   updateMeal(id, newMeal) {
     // Define input requirements
     const schema = {

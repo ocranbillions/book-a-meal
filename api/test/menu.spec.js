@@ -31,18 +31,16 @@ describe('Test All Menu Routes', () => {
     });
   });
 
-  describe('/POST api/v1/menu/:date', () => {
-    it('should ADD a meal to a menu', () => {
-      const meal = {
-        date: 'some date',
-        image: 'some image link',
-        name: 'some meal',
-        description: 'some description',
-        price: 'some price',
+  describe('/POST api/v1/menu/', () => {
+    it('should ADD a meal from db to a menu', () => {
+      // Meal name alredy in db
+      const data = {
+        name: 'jollof',
+        date: 'tomorrow',
       };
       chai.request(server)
         .post('/api/v1/menu/')
-        .send(meal)
+        .send(data)
         .end((err, res) => {
           res.body.should.have.property('result');
           res.body.should.have.property('status').eql('success');

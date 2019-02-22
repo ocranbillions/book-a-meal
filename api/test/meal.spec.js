@@ -82,7 +82,7 @@ describe('Test All Meal Routes', () => {
         price: '1000',
       };
       chai.request(server)
-        .put('/api/v1/meals/50')
+        .put('/api/v1/meals/60')
         .send(meal)
         .end((err, res) => {
           res.body.should.have.property('meal');
@@ -111,7 +111,7 @@ describe('Test All Meal Routes', () => {
   describe('/DELETE meal/:id', () => {
     it('should delete a meal with a valid ID', () => {
       chai.request(server)
-        .delete('/api/v1/meals/50')
+        .delete('/api/v1/meals/70')
         .end((err, res) => {
           res.body.should.have.property('meal');
           res.body.should.have.property('message').eql('Delete was successful');

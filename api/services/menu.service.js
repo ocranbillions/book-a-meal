@@ -22,6 +22,7 @@ const menuService = {
       newMeal.description = meal.description;
       newMeal.price = meal.price;
       dummyData.menu[date].push(newMeal);
+
       return newMeal;
     }
     // else new day, new menu begins
@@ -33,7 +34,7 @@ const menuService = {
     newMeal.description = meal.description;
     newMeal.price = meal.price;
     dummyData.menu[date].push(newMeal);
-    // console.log(dummyData.menu);
+
     return newMeal;
   }
 }
