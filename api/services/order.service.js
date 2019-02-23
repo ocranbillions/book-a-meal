@@ -1,3 +1,4 @@
+import Joi from 'joi';
 import dummyData from '../utils/dummyData';
 
 /*
@@ -11,48 +12,73 @@ import dummyData from '../utils/dummyData';
 const OrderService = {
   getAllOrders() {
     const orders = dummyData.orders;
-    // const orders = dummyData[ , , order]; DESTRUCTURING TO BE USED HERE
     return orders;
   },
 
   getSingleOrder(orderId) {
     const order = dummyData.orders.find(order => order.orderId == orderId);
-    // const meal = dummyData.meals.find(meal => meal.id == id);
-    return order || {};
+    return order;
   },
 
   updateOrder(orderId, updatedOrder) {
-    dummyData.orders.find((order, index) => {
-      if (order.orderId == orderId) {
-        if (order.status !== 'processed') {
-          dummyData.orders[index].meal = updatedOrder.meal;
-          dummyData.orders[index].address = updatedOrder.address;
-          dummyData.orders[index].cost = updatedOrder.cost;
-        } else {
-          console.log('Can\'t modify order. Order has already been processed!');
-          // alert('Order has already been processed!');
-        }
-      }
-    });
-    return dummyData.orders;
+    // Define input requirements
+    const schema = {
+      meal: Joi.string().min(1).required(),
+      qty: Joi.string().min(1).required(),
+      cost: Joi.string().min(1).required(),
+    };
+
+    // Validate input
+    let result = Joi.validate(updatedOrder, schema);
+    // Bad request, incorrect user input
+    if (result.error) return result;
+
+    // Look up meal
+    const order = dummyData.orders.find(o => o.orderId === orderId);
+
+    const index = dummyData.orders.indexOf(order);
+
+    // Update meal if possible
+    if (dummyData.orders[index].status !== 'processed') {
+      dummyData.orders[index].qty = updatedOrder.qty;
+      dummyData.orders[index].cost = updatedOrder.cost;
+    } else {
+      return { order_already_processed: 'Can\'t modify order. Order has already been processed!' };
+    }
+
+    return dummyData.orders[index];
   },
 
-  // Place order - user cannot modify the order after 1min
-  // After 1min change status to 'processed' so user can't modify
-  // wil be changed to 5mins on production
   addOrder(order) {
-    const id = dummyData.orders.length + 1;
-    order.orderId = id;
+    // Define input requirements
+    const schema = {
+      meal: Joi.string().min(1).required(),
+      qty: Joi.string().min(1).required(),
+      cost: Joi.string().min(1).required(),
+    };
+
+    // Validate input
+    const result = Joi.validate(order, schema);
+    // Bad request, incorrect user input
+    if (result.error) return result;
+
+    // Create orderId
+    order.orderId = dummyData.orders.length + 1;
+    // Add date
+    order.date = '23-02-2019';
+    // Add status
+    order.status = 'pending';
+
     dummyData.orders.push(order);
 
+    // Customer can't modify order after 1min
     setTimeout(() => {
       const index = dummyData.orders.indexOf(order);
       dummyData.orders[index].status = 'processed';
     }, 60000); //<-- 1minute
 
-    const orders = dummyData.orders;
-    return orders;
-  }
-}
+    return order;
+  },
+};
 
 export default OrderService;

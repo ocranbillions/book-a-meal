@@ -4,49 +4,60 @@ const OrderController = {
   getAllOrders(req, res) {
     const orders = OrderService.getAllOrders();
     return res.json({
+      orders,
       status: 'success',
-      data: orders
-    }).status(200);
+    });
   },
 
   getSingleOrder(req, res) {
     const id = req.params.orderId;
     const order = OrderService.getSingleOrder(id);
     return res.json({
+      order,
       status: 'success',
-      data: order
-    }).status(200);
+    });
   },
 
   updateOrder(req, res) {
-    const id = req.params.orderId;
-    const order = req.body;
-    const result = OrderService.updateOrder(id, order);
+    let { orderId } = req.params;
+    orderId = parseInt(orderId);
+    let order = req.body;
+    const result = OrderService.updateOrder(orderId, order);
+
+    // error in user inputs 
+    if (result.error) return res.status(400).send(result.error.message);
+
+    // order already processed
+    if (result.order_already_processed) return res.status(400).send(result.order_already_processed);
+
+    order = result;
     return res.json({
+      order,
       status: 'success',
-      data: result
-    }).status(200);
+    });
   },
 
   addOrder(req, res) {
     /*
-        Expect json of the format
+      Expect json of the format
       {
-        date: '01-01-2019',
-        meal: 'Beans with Plantain',
-        address: '3 Ajose Adeogun, Victoria Island',
-        status: 'pending'
+        meal: 'some meal',
+        qty: 1,
         cost: 300
       }
     */
-    const order = req.body;
+    let order = req.body;
     const result = OrderService.addOrder(order);
-    return res.json({
-      status: 'success',
-      data: result
-    }).status(201);
-  },
+    // Bad request, error in user inputs
+    if (result.error) return res.status(400).send(result.error.message);
 
-}
+    // Valid input, addOrder() was successful
+    order = result;
+    return res.json({
+      order,
+      status: 'success',
+    });
+  },
+};
 
 export default OrderController;

@@ -45,11 +45,11 @@ table {
     height: 2rem;
   }
 
-  tbody tr:last-child td {
+  tbody .last-row {
     border-bottom: 0px;
     font-weight: bold;
   }
-  tbody tr:last-child td:first-child {
+  tbody .last-row .first-child {
     text-align: right;
   }
 }
