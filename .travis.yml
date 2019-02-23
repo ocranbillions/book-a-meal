@@ -1,6 +1,11 @@
 language: node_js
 node_js: 
   - "stable"
+before_install: cd api/
+install:
+      - npm install
+script:
+      - npm test
 cache:
   directories:
     - "api/node_modules"
@@ -8,4 +13,4 @@ cache:
 # whitelist
 branches:
   only:
-  - travis-ci
+  - travis
