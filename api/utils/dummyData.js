@@ -3,7 +3,7 @@ export default {
     {
       id: 50,
       image: 'https://via.placeholder.com/80',
-      name: 'Fried Rice1',
+      name: 'jollof',
       description: 'Some very nice fried rice you can\'t resist',
       price: '450'
     },
