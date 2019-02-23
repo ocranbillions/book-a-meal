@@ -58,6 +58,7 @@ h3 {
 }
 .fade-bg-img {
   background-color: rgba(0, 0, 0, 0.55);
+  /* height: 100vh; */
 }
 .heading {
   font-size: 2rem;
@@ -281,11 +282,11 @@ table td {
 .orders_table td {
     height: 2rem;
   }
-.orders_table tbody tr:last-child td {
+.orders_table tbody .last-row {
     border-bottom: 0px;
     font-weight: bold;
   }
-.orders_table tbody tr:last-child td:first-child {
+.orders_table tbody .last-row .first-child {
     text-align: right;
   }
 /* to be used later for mobile display */
@@ -351,12 +352,14 @@ table td {
 .footer {
   border-top: 5px solid #13e247;
   margin-top: 2rem;
+  /*position: fixed;*/
 }
-/*  background: darkcyan; */
+/*bottom: 0px;*/
 .footer * {
     margin: 0px;
     padding: 0px;
   }
+/*width: 100%;*/
 .footer .ft-item-div {
     text-align: center;
   }

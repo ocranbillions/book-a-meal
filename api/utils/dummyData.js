@@ -76,25 +76,25 @@ export default {
       orderId: 1,
       date: '14-02-2019',
       meal: 'Hot Eba',
-      address: '14 Penninsula, Lekki',
+      qty: 1,
       status: 'pending',
-      cost: 500
+      cost: 500,
     },
     {
       orderId: 2,
       date: '01-01-2019',
       meal: 'Beans with Plantain',
-      address: '3 Ajose Adeogun, Victoria Island',
+      qty: 2,
       status: 'pending',
-      cost: 300
+      cost: 300,
     },
     {
       orderId: 3,
       date: '11-01-2019',
       meal: 'Chicken',
-      address: '22 Ajao Estate, Lagos',
+      qty: 1,
       status: 'processed',
-      cost: 600
+      cost: 600,
     },
-  ]
+  ],
 };

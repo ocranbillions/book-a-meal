@@ -21,9 +21,10 @@ const MealController = {
     */
     let meal = req.body;
     const result = MealService.addMeal(meal);
-
+    // Bad request, error in user inputs
     if (result.error) return res.status(400).send(result.error.message);
 
+    // Valid input, addMeal() was successful
     meal = result;
     return res.json({
       meal,

@@ -20,7 +20,7 @@
       width: 100%;
       height: 4rem;
     }
-
+ 
     .btn-subscribe {
     }
   }
@@ -33,7 +33,9 @@
 .footer {
   border-top: 5px solid $fineGreen;
   margin-top: 2rem;
-  /*  background: darkcyan; */
+  /*position: fixed;*/
+  /*width: 100%;*/
+  /*bottom: 0px;*/
 
   * {
     margin: 0px;
