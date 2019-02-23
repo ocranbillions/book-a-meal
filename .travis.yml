@@ -13,4 +13,4 @@ cache:
 # whitelist
 branches:
   only:
-  - travis
+  - develop
