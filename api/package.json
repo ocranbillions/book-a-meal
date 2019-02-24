@@ -4,8 +4,10 @@
   "description": "book-a-meal API",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require @babel/register test/*.js --exit",
-    "start": "nodemon --exec babel-node index.js"
+    "start": "nodemon --exec babel-node index.js",
+    "test2": "mocha --require @babel/register test/*.js --exit",
+    "test": "nyc --require @babel/register mocha test/*.js --exit -w",
+    "cover": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "",
   "license": "ISC",
@@ -20,13 +22,17 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
+    "babel-istanbul": "^0.12.2",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
+    "coveralls": "^3.0.3",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
+    "istanbul": "^0.4.4",
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "nyc": "^13.3.0"
   },
   "keywords": []
 }
