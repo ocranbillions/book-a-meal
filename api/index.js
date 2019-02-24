@@ -18,8 +18,7 @@ app.use('/api/v1/menu', menuRoutes);
 // handle all order routes
 app.use('/api/v1/orders', orderRoutes);
 
-// const port = process.env.PORT || 3000;
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App is listening on port ${port}!`);
 });
