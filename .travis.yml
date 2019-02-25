@@ -1,6 +1,8 @@
 language: node_js
 node_js: 
   - "stable"
+env: 
+  - CODECLIMATE_REPO_TOKEN=801645cdf755426e8d793a43bcf378c1a9483052c4f5421eb1fc5b7eea5a9d50
 before_install: cd api/
 cache:
   directories:
