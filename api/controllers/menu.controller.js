@@ -20,13 +20,18 @@ const MenuController = {
   },
 
   addMenu(req, res) {
-    // Expect data from form element
-    // const mealName = req.body.meals.value; //meal names should gotten from db
-    // const date = req.body.date;
+    // When testing this (with postman), this endpoint expects req.body.mealName to contain a meal
+    // that is already in the db or dummyData.js else it wont work.
+    // this is bcos the html has a select element that will contain names of meals in our db.
+    // for now, our db is dummyData and so we can only select meals from dummyData.js
+    const { mealName } = req.body;
+    const { date } = req.body;
 
-    const mealName = req.body.name;
-    const date = req.body.date;
-
+    // Alternatively, you can uncomment these lines below
+    // run a post request to add noodles (already in dummyData) to tomorrow's menu
+    // this is to simulate data (mealName & date) comiming from the form
+    // const mealName = 'noodles';
+    // const date = 'tomorrow';
 
     // Get meal from db
     const meal = MealService.findMealByName(mealName);
@@ -37,7 +42,7 @@ const MenuController = {
       result,
       status: 'success',
     });
-  }
-}
+  },
+};
 
 export default MenuController;

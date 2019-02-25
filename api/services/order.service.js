@@ -11,12 +11,12 @@ import dummyData from '../utils/dummyData';
 */
 const OrderService = {
   getAllOrders() {
-    const orders = dummyData.orders;
+    const { orders } = dummyData;
     return orders;
   },
 
   getSingleOrder(orderId) {
-    const order = dummyData.orders.find(order => order.orderId == orderId);
+    const order = dummyData.orders.find(o => o.orderId === orderId);
     return order;
   },
 
