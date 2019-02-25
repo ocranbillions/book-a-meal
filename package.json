@@ -4,6 +4,7 @@
   "description": "book-a-meal API",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node api/index.js",
     "test": "nyc mocha --require @babel/register api/test/*.js --exit",
     "cover": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "coveralls": "npm run test && npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
