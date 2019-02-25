@@ -1,1 +1,1 @@
-web:  babel-node index.js --prefix api/
+web:  babel-node api/index.js
