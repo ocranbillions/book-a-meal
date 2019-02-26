@@ -8,7 +8,7 @@
     "dev": "nodemon --exec babel-node api/index.js",
     "test": "nyc mocha --require @babel/register api/test/*.js --exit",
     "cover": "nyc --reporter=lcov --reporter=text-lcov npm test",
-    "cc-coverage": "coveralls < ./coverage/lcov.info",
+    "cc-coverage": "codeclimate-test-reporter < ./coverage/lcov.info",
     "coveralls": "npm run test && npm run cover && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
