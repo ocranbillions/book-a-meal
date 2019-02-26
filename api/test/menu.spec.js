@@ -35,7 +35,7 @@ describe('Test All Menu Routes', () => {
     it('should ADD a meal from db to a menu', () => {
       // Meal name alredy in db
       const data = {
-        name: 'jollof',
+        mealName: 'jollof',
         date: 'tomorrow',
       };
       chai.request(server)
