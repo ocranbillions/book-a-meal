@@ -8,7 +8,8 @@
     "dev": "nodemon --exec babel-node api/index.js",
     "test": "nyc mocha --require @babel/register api/test/*.js --exit",
     "cover": "nyc --reporter=lcov --reporter=text-lcov npm test",
-    "coveralls": "npm run test && npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+    "cc-coverage": "coveralls < ./coverage/lcov.info",
+    "coveralls": "npm run test && npm run cover && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
+    "codeclimate-test-reporter": "^0.5.1",
     "coveralls": "^3.0.3",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
