@@ -74,7 +74,6 @@ h3 {
 /* Titles */
 .heading_2 {
   font-size: 3.2rem;
-  line-height: 5rem;
   display: block;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -366,39 +365,53 @@ table td {
   width: 150px;
   word-wrap: break-word;
 } */
-.row {
-  /* border-bottom: 2px dotted black; */
-  /*   border: 2px dotted black; */
-  display: inline-block;
-  margin: 0px auto;
-}
-.breakfast,
-.lunch,
-.dinner {
-  margin-top: 2rem;
-}
-.row::after {
+/* .SOMECLASS::after {
   content: "";
   clear: both;
   display: table;
-}
-/* 
-.center_row_contents {
-    background: blue;
-    display: inline-block;
-    margin: 0px auto;
 } */
+.set_menu_form .form-group, .add_meal_form .form-group {
+    display: inline-block;
+  }
 .meal {
-  float: left;
-  width: 20rem;
+  display: inline-block;
+  line-height: 1.7rem;
   text-align: center;
-  padding: 5px;
-  /*  border: 1px dotted blue; */
+  margin: 0px 5px;
+  width: 150px;
+  margin-bottom: 10px;
 }
-/* @media only screen and (min-width: 800px) {
-    } */
+/* border: 1px dotted white; */
+.meal .btn-red {
+    background: red;
+  }
+.meal button {
+    border: none;
+    padding: 5px;
+  }
+@media only screen and (min-width: 720px) {
+.meal {
+    width: 200px
+}
+  }
 .meal img {
-    width: 95%;
+    height: 120px;
+    width: 120px;
+  }
+/* .SOMECLASS::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+.set_menu_form .form-group, .add_meal_form .form-group {
+    display: inline-block;
+  }
+.meal .btn-green {
+    background: greenyellow;
+  }
+.meal .qty {
+    width: 50px;
+    margin: 5px;
   }
 .subscribe {
   /* border: 1px solid darkcyan; */

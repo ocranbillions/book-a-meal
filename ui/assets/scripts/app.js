@@ -12,6 +12,6 @@ $('.login-btn').on('click', () => {
     $('.card form').attr('action', './temp/client.menu.today.html');
   } else {
     // Caterer landing page
-    $('.card form').attr('action', './temp/manage_meals.html');
+    $('.card form').attr('action', './temp/admin.manage.meals.html');
   }
 });

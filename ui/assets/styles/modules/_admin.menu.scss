@@ -1,0 +1,35 @@
+/* .SOMECLASS::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+.set_menu_form,
+.add_meal_form {
+  .form-group {
+    display: inline-block;
+  }
+}
+
+.meal {
+  display: inline-block;
+  line-height: 1.7rem;
+  text-align: center;
+  margin: 0px 5px;
+  width: 150px;
+  margin-bottom: 10px;
+  /* border: 1px dotted white; */
+  .btn-red {
+    background: red;
+  }
+  button {
+    border: none;
+    padding: 5px;
+  }
+  @media only screen and (min-width: 720px) {
+    width: 200px;
+  }
+  img {
+    height: 120px;
+    width: 120px;
+  }
+}

@@ -1,0 +1,21 @@
+/* .SOMECLASS::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+.set_menu_form,
+.add_meal_form {
+  .form-group {
+    display: inline-block;
+  }
+}
+
+.meal {
+  .btn-green {
+    background: greenyellow;
+  }
+  .qty {
+    width: 50px;
+    margin: 5px;
+  }
+}

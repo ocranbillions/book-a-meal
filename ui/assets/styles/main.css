@@ -3,7 +3,8 @@
 @import "modules/_navbar.scss";
 @import "modules/_hero.scss";
 @import "modules/_table.scss";
-@import "modules/_meals.scss";
+@import "modules/_admin.menu.scss";
+@import "modules/_client.menu.scss";
 
 .subscribe {
   /* border: 1px solid darkcyan; */
@@ -20,7 +21,7 @@
       width: 100%;
       height: 4rem;
     }
- 
+
     .btn-subscribe {
     }
   }
