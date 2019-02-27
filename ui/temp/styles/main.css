@@ -93,9 +93,6 @@ h3 {
   background: #13e247;
   padding: 0.5rem;
 }
-.pull_right {
-  float: right;
-}
 /* Navbar */
 .navbar {
   overflow: auto;
@@ -136,6 +133,9 @@ h3 {
         float: left;
       }
       .navbar ul .logout {
+        float: right;
+      }
+      .navbar ul .pull_right {
         float: right;
       }
     }
@@ -253,7 +253,7 @@ h3 {
     }
 table {
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 table .hide_column {
     display: none;
