@@ -26,6 +26,7 @@ const MenuController = {
     // for now, our db is dummyData and so we can only select meals from dummyData.js
     const { mealName } = req.body;
     const { date } = req.body;
+    const { category } = req.body;
 
     // Alternatively, you can uncomment these lines below
     // run a post request to add noodles (already in dummyData) to tomorrow's menu
@@ -36,7 +37,7 @@ const MenuController = {
     // Get meal from db
     const meal = MealService.findMealByName(mealName);
 
-    const result = MenuService.addMenu(date, meal);
+    const result = MenuService.addMenu(date, meal, category);
 
     return res.json({
       result,
