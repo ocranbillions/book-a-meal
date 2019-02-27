@@ -30,38 +30,57 @@ export default {
     },
   ],
   menu: {
-    today: [
-      {
-        id: 1,
-        image: 'https://via.placeholder.com/80',
-        name: 'noodles',
-        description: 'Some very noodles rice you can\'t resist',
-        price: '450',
-      },
-      {
-        id: 2,
-        image: 'https://via.placeholder.com/80',
-        name: 'plantain',
-        description: 'Some very nice plantain you can\'t resist',
-        price: '450',
-      },
-    ],
-    tomorrow: [
-      {
-        id: 1,
-        image: 'https://via.placeholder.com/80',
-        name: 'beans',
-        description: 'Some very nice beans you can\'t resist',
-        price: '450',
-      },
-      {
-        id: 2,
-        image: 'https://via.placeholder.com/80',
-        name: 'jollof',
-        description: 'Some very nice jollof you can\'t resist',
-        price: '450',
-      },
-    ],
+    today: {
+      breakfast: [
+        {
+          id: 1,
+          image: 'https://via.placeholder.com/80',
+          name: 'noodles',
+          description: 'Some very noodles rice you can\'t resist',
+          price: '450',
+        },
+        {
+          id: 2,
+          image: 'https://via.placeholder.com/80',
+          name: 'plantain',
+          description: 'Some very nice plantain you can\'t resist',
+          price: '450',
+        },
+      ],
+      lunch: [
+        {
+          id: 1,
+          image: 'https://via.placeholder.com/80',
+          name: 'noodles',
+          description: 'Some very noodles rice you can\'t resist',
+          price: '450',
+        },
+        {
+          id: 2,
+          image: 'https://via.placeholder.com/80',
+          name: 'plantain',
+          description: 'Some very nice plantain you can\'t resist',
+          price: '450',
+        },
+      ],
+      dinner: [
+        {
+          id: 1,
+          image: 'https://via.placeholder.com/80',
+          name: 'noodles',
+          description: 'Some very noodles rice you can\'t resist',
+          price: '450',
+        },
+        {
+          id: 2,
+          image: 'https://via.placeholder.com/80',
+          name: 'plantain',
+          description: 'Some very nice plantain you can\'t resist',
+          price: '450',
+        },
+      ],
+    },
+
   },
   orders: [
     {

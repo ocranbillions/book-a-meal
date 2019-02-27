@@ -37,6 +37,7 @@ describe('Test All Menu Routes', () => {
       const data = {
         mealName: 'jollof',
         date: 'tomorrow',
+        category: 'breakfast',
       };
       chai.request(server)
         .post('/api/v1/menu/')
