@@ -93,6 +93,9 @@ h3 {
   background: #13e247;
   padding: 0.5rem;
 }
+.pull_right {
+  float: right;
+}
 /* Navbar */
 .navbar {
   overflow: auto;
@@ -285,16 +288,73 @@ table td {
       height: 8rem;
     }
   }
+/* Last row : show only 'total' and 'value' */
+tbody .last-row {
+  border-bottom: 0px;
+  font-weight: bold;
+}
+tbody .last-row .first-child {
+  text-align: right;
+}
+tbody .last-row .first-child-pull-left {
+  text-align: left;
+}
+/* Orders table */
 .orders_table td {
     height: 2rem;
   }
-.orders_table tbody .last-row {
-    border-bottom: 0px;
-    font-weight: bold;
+/* Shopping cart table */
+.cart_table {
+  width: 100%;
+}
+.cart_table td {
+    text-align: left;
+    line-height: 1.5rem;
   }
-.orders_table tbody .last-row .first-child {
-    text-align: right;
+.cart_table th {
+    background: white;
+    color: #05386b;
   }
+@media only screen and (min-width: 750px) {
+.cart_table {
+    width: 80%
+}
+
+    .cart_table th,
+    .cart_table td {
+      padding: 5px;
+    }
+  }
+.cart_table input[type="number"] {
+    width: 4.5rem;
+  }
+.cart_table img {
+    height: 8rem;
+    width: 8rem;
+  }
+.cart_table .last-row-1 td {
+      border-bottom: none;
+      height: 1rem;
+      font-weight: 1000;
+    }
+.cart_table .last-row-1 .total {
+      text-align: right;
+    }
+.cart_table .last-row td {
+      border-bottom: none;
+      height: 0rem;
+    }
+.cart_table .last-row .btn {
+      background: white;
+      color: #05386b;
+      padding: 5px;
+    }
+@media only screen and (min-width: 750px) {
+      .cart_table .last-row .btn {
+      }
+    }
+.last-row td {
+}
 /* to be used later for mobile display */
 /* table {
   border-collapse: collapse;
