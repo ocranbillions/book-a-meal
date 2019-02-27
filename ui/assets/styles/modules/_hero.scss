@@ -70,6 +70,12 @@
     height: 3rem;
   }
 
+  & input[type="radio"] {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin: 0.5rem 0.7rem 1.5rem 0.7rem;
+  }
+
   & .register {
     text-align: center;
     & a {

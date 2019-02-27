@@ -232,6 +232,11 @@ h3 {
     width: 100%;
     height: 3rem;
   }
+.hero-content .card input[type="radio"] {
+    height: 1.3rem;
+    width: 1.3rem;
+    margin: 0.5rem 0.7rem 1.5rem 0.7rem;
+  }
 .hero-content .card .register {
     text-align: center;
   }
