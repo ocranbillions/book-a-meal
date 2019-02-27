@@ -4,7 +4,11 @@
   display: inline-block;
   margin: 0px auto;
 }
-
+.breakfast,
+.lunch,
+.dinner {
+  margin-top: 2rem;
+}
 .row::after {
   content: "";
   clear: both;

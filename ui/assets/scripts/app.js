@@ -9,7 +9,7 @@ $('.login-btn').on('click', () => {
   const radioValue = $("input[name='user_type']:checked").val();
   if (radioValue === 'customer') {
     // Customer landing page
-    $('.card form').attr('action', './temp/user_menu_list.html');
+    $('.card form').attr('action', './temp/client.menu.today.html');
   } else {
     // Caterer landing page
     $('.card form').attr('action', './temp/manage_meals.html');
