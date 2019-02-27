@@ -42,7 +42,7 @@
                     <!-- Login Form -->
                     <div class="card">
                         <h2>Login</h2>
-                        <form action="./temp/manage_meals.html">
+                        <form action="">
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="email" name="email" id="email" />
@@ -51,6 +51,11 @@
                                 <label for="password">Password</label>
                                 <input type="password" name="password" id="password" />
                             </div>
+                            <span>
+                                <p>Account Type:</p>
+                                Customer<input type="radio" name="user_type" value="customer" checked>
+                                Caterer<input type="radio" name="user_type" value="caterer">
+                            </span>
                             <input type="submit" value="Login" class="btn login-btn">
                         </form>
                         <div class="register">
@@ -116,6 +121,7 @@
             </div>
         </section>
     </div>
+    <script src="./temp/scripts/app.bundle.js"></script>
 </body>
 
 </html>

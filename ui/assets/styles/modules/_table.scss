@@ -1,6 +1,6 @@
 table {
   width: 100%;
-  text-align: center;
+  text-align: left;
 
   .hide_column {
     display: none;
@@ -40,20 +40,82 @@ table {
   }
 }
 
+/* Last row : show only 'total' and 'value' */
+tbody .last-row {
+  border-bottom: 0px;
+  font-weight: bold;
+}
+tbody .last-row .first-child {
+  text-align: right;
+}
+tbody .last-row .first-child-pull-left {
+  text-align: left;
+}
+
+/* Orders table */
 .orders_table {
   td {
     height: 2rem;
   }
+}
 
-  tbody .last-row {
-    border-bottom: 0px;
-    font-weight: bold;
+/* Shopping cart table */
+.cart_table {
+  width: 100%;
+  td {
+    text-align: left;
+    line-height: 1.5rem;
   }
-  tbody .last-row .first-child {
-    text-align: right;
+  th {
+    background: white;
+    color: $navyBlue;
+  }
+  @media only screen and (min-width: 750px) {
+    width: 80%;
+
+    th,
+    td {
+      padding: 5px;
+    }
+  }
+
+  input[type="number"] {
+    width: 4.5rem;
+  }
+  img {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .last-row-1 {
+    td {
+      border-bottom: none;
+      height: 1rem;
+      font-weight: 1000;
+    }
+    .total {
+      text-align: right;
+    }
+  }
+  .last-row {
+    td {
+      border-bottom: none;
+      height: 0rem;
+    }
+    .btn {
+      background: white;
+      color: $navyBlue;
+      padding: 5px;
+    }
+    @media only screen and (min-width: 750px) {
+      .btn {
+      }
+    }
   }
 }
 
+.last-row td {
+}
 /* to be used later for mobile display */
 /* table {
   border-collapse: collapse;
