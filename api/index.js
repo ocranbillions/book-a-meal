@@ -1,10 +1,15 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+// import Sequelize from 'sequelize';
 
 // routes
 import mealRoutes from './routes/meal.route';
 import menuRoutes from './routes/menu.route';
 import orderRoutes from './routes/order.route';
+
+const models = require('../models');
+
+const Op = models.Sequelize.Op;
 
 const app = express();
 app.use(bodyParser.json());
@@ -21,6 +26,11 @@ app.use('/api/v1/menu', menuRoutes);
 
 // handle all order routes
 app.use('/api/v1/orders', orderRoutes);
+
+
+app.get('/testing_db', (req, res) => {
+  models.Meal.findAll().then(pr => res.send(pr));
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
