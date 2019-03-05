@@ -28,8 +28,6 @@ const MealController = {
 
     // Valid input, addMeal() was successful
     meal = result;
-    console.log(result);
-    console.log(meal);
     return res.json({
       meal,
       status: 'success',

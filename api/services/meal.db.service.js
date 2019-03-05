@@ -1,14 +1,12 @@
 import Joi from 'joi';
-import dummyData from '../utils/dummyData';
+// import dummyData from '../utils/dummyData';
 // import Meal from '../models/meal.model';
 import models from '../../models';
 
 const MealService = {
   async fetchAllMeals() {
     const Meals = await models.Meal.findAll()
-      .then((resp) => {
-        return resp;
-      })
+      .then(resp => resp)
       .catch(err => err);
     return Meals;
   },
